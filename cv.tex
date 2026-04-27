@@ -1,0 +1,377 @@
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.85]{geometry}
+\usepackage{ltablex}
+\keepXColumns         
+\setlength\LTpre{8pt} 
+\setlength\LTpost{8pt}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{6pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\hypersetup{
+    hidelinks,
+    pdfcreator={LaTeX},
+    pdfproducer={LaTeX},
+    breaklinks=true
+}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Muhammad Saad Ashraf} \\[7.5pt]
+Islamabad, Pakistan \\
+\href{https://github.com/saad1551}{Github: saad1551}\hspace{1em}
+\href{https://linkedin.com/in/saadashraf380715222}{Linkedin: saad1551}\hspace{1em}
+\href{mailto:mashraf.bese22seecs@seecs.edu.pk}{Email: mashraf.bese22seecs@seecs.edu.pk}\hspace{1em}
+Phone: +92 307 5777194 \\
+\end{tabularx}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+Enthusiastic Software Engineering student focused on solving complex problems, developing scalable systems, and exploring innovative areas of Computer Science research.
+
+
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2022 - present & Bachelor's (Software Engineering) at \textbf{NUST Islamabad} \hfill \normalsize (CGPA: 3.41/4.0) \\
+
+2020 - 2022 & Intermediate at \textbf{Adamjee Science College, Karachi} \hfill \normalsize (91.8\%) \\
+
+2018 - 2020 & Matriculation at \textbf{The Educator's} \hfill \normalsize (87.5\%) \\
+\end{tabularx}
+
+
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{} l X @{} }
+% \textbf{Exec. Web \& IT, NUST Olympiad} & \hfill Dec 2023 – Feb 2024 \\
+% \multicolumn{2}{@{}p{\linewidth}@{}}{
+% Built the MERN stack website for NUST’s flagship event in a fast-paced team setting.
+% } \\[5pt]
+
+% \textbf{Deep Learning Research Intern, TUKL DLL SEECS} & \hfill Jun 2024 – Nov 2024 \\
+% \multicolumn{2}{@{}p{\linewidth}@{}}{
+% Worked on EEG classification and explainable AI models and created a chatbot for querying 600+ EEG recordings with the ability to append more data.
+% } \\[5pt]
+
+% \textbf{Software Eng. Intern, Proto IT Consultants} & \hfill Nov 2024 – Feb 2025 \\
+% \multicolumn{2}{@{}p{\linewidth}@{}}{
+% Maintained 30+ scrapers collecting 300K+ events. Built backends for a major AI products.
+% } \\[5pt]
+
+% \textbf{Software Engineer, Pinkfly} & \hfill Feb 2025 – June 2025 \\
+% \multicolumn{2}{@{}p{\linewidth}@{}}{
+% Developing backend for a ride-hailing app and building RAG pipelines to automate in-app support.
+% } \\
+
+\textbf{Bazaar Technologies} \\[3pt]
+
+\textbf{Engineering Trainee} & \hfill August 2025 – Present \\
+\multicolumn{2}{@{}p{\linewidth}@{}}{
+\begin{itemize}
+    \item Contributed to the development of Bazaar Pro Portal (portal.bazaarpro.co) which serves as the platform for businesses to put in their demands in order to get a quotation from Bazaar.
+    \item Rebuilt the card payment feature by integrating with HBL and Cybersource, improving payment reliability, reducing payment failures to near 0\%\ and eliminating chargebacks.
+    \item Eliminated security flaws in existing APIs that could have exposed sensitive user data.
+    \item Integrated FBR digital invoicing via WebDNAWorks, ensuring regulatory compliance and enabling legal, automated invoice reporting.
+\end{itemize}
+} \\[6pt]
+
+\textbf{Engineering Intern} & \hfill June 2025 – August 2025 \\
+\multicolumn{2}{@{}p{\linewidth}@{}}{
+Worked with the Finance squad and gained experience with payment flows and complex microservice architectures.
+\begin{itemize}
+    \item Made refunds for card payments instant via a wallet-first approach; 47\% of customers retained funds in their wallet.
+    \item Integrated a new payment gateway (JazzCash) into the mobile app, resulting in an 11\% increase in digitally paid orders.
+    \item Migrated microservices to the latest stable versions of Java and Spring Boot.
+\end{itemize}
+} \\[5pt]
+
+
+\end{tabularx}
+
+\section{Research Experience}
+
+\begin{tabularx}{\linewidth}{ @{} l X @{} }
+
+\textbf{Deep Learning Research Intern, TUKL DLL SEECS} & \hfill Jun 2024 – Nov 2024 \\
+\multicolumn{2}{@{}p{\linewidth}@{}}{
+Worked on EEG classification and explainable AI models and a chatbot for querying 600+ EEG recordings with the ability to append more data.
+\begin{itemize}
+    \item Conducted a thorough literature review of existing techniques for EEG classification through deep neural networks.
+    \item Researched different explainability techniques and applied LIME, SHAP and Grad-CAM to EEG data.
+    \item Made a chatbot using Retrieval Augmented Generation to query statistics from EEG recordings in natural language.
+\end{itemize}
+    
+} \\[5pt]
+
+\textbf{Undergraduate Research Collaborator, TUKL DLL SEECS} & \hfill May 2025 – Present \\
+\multicolumn{2}{@{}p{\linewidth}@{}}{
+Working on my final year project 'Adaptive Web Interaction: Leveraging Reinforcement Learning for Comprehensive and on natural language report generation from EEG recordings 
+\begin{itemize}
+    \item Training agents based on small language models for autonomous web navigation using on-policy reinforcement learning.
+    \item Created a web extension in which language models can be integrated and actions can be taken on the user's browser following a natual language prompt given by the user.
+\end{itemize}
+    
+} \\[5pt]
+
+\end{tabularx}
+
+
+
+
+%Experience
+
+
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}X@{} }
+\textbf{FairGig} \hfill \href{https://fairgig.online}{[Live]} \\[3.75pt]
+Microservices-based gig worker rights platform (SOFTEC 2026) with 7 backend services (FastAPI + Express), \\
+React frontend, LLM-powered shift logging, vision-based verification, and statistical anomaly detection. \\
+
+\textbf{Search Engine} \hfill \href{https://github.com/saad1551/SearchEngine}{[GitHub]} \\[3.75pt]
+Built a large-scale search engine indexing 110k+ articles, experimenting with various search \\
+algorithms from the academic literature and implementing barrelling techniques described in \\
+The Anatomy of a Large-Scale Hypertextual Web Search Engine (Brin \&\ Page, 1998). \\
+
+\textbf{V-Therapist} \hfill \href{https://github.com/saad1551/psychologist-language-model}{[GitHub]} \\[3.75pt]
+Built a virtual psychologist using memory enhancement techniques on small language models. \\
+Carried out research on the possible memory enhancement techniques and eventually went \\
+with vector databases which gave the best performance. \\
+
+\textbf{Web-Sense} \hfill \href{https://github.com/saad1551/final-year-project}{[GitHub]} \\[3.75pt]
+An ongoing research project, also my senior year project, \\
+in which we are training small language models \\
+using reinforcement learning to effectively and reliably perform the task of web navigation. \\
+Researching different on-policy RL techniques to use the available \\
+datasets in improving the performance of these models. \\
+
+\textbf{Scored} \hfill \href{https://github.com/saad1551/cricketScoreboard}{[GitHub]} \\[3.75pt]
+A complete cricket scoring system along with a win predictor consistent with all the complex \\
+rules and playing conditions of the game. The win predictor was based on previous statistics \\
+of the players taking part in the game.\\
+
+\textbf{Book Reviews Backend} \hfill \href{https://github.com/saad1551/expressBookReviews}{[GitHub]} \\[3.75pt]
+NodeJS + Express app with auth and review system using middlewares. \\
+
+\textbf{EEG Chatbot} \hfill \href{https://github.com/saad1551/eeg-chatbot}{[GitHub]} \\[3.75pt]
+LangChain-based bot to query EEG statistics and specifics via natural language. \\
+
+\textbf{Dastkaar E-commerce} \hfill \href{https://github.com/saad1551/web-engineering-project-backend}{[GitHub]} \\[3.75pt]
+Platform enabling rural women to sell handmade goods online. \\
+
+% \textbf{Digit Recognition} \hfill \href{https://github.com/saad1551/DeepLearning}{[GitHub]} \\[3.75pt]
+% Classified MNIST digits using VGG16 with 96\% test accuracy. \\
+
+
+
+\textbf{Plant Shop Frontend} \hfill \href{https://saad1551.github.io/e-plantShopping/}{[Live]} \\[3.75pt]
+ReactJS store with cart, Redux-based state, and product management. \\
+
+\textbf{Conference Planner} \hfill \href{https://saad1551.github.io/react-conference-planner-app/}{[Live]} \\[3.75pt]
+ReactJS + Redux app to plan events across multiple categories. \\
+
+
+
+
+
+
+
+
+% \textbf{Cricket Shots Classifier} & \hfill \href{https://github.com/saad1551/DeepLearning}{[GitHub]} \\[3.75pt]
+% VGG16-based model to detect cricket shots (88\% accuracy). \\
+
+% \textbf{Disaster Tweets} & \hfill \href{https://www.kaggle.com/code/saadashraf88/nlp-disaster}{[Kaggle]} \\[3.75pt]
+% TensorFlow model to classify tweets as real disaster or not. \\
+\end{tabularx}
+
+
+
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}} 
+Programming languages: &  \normalsize{Javascript, Python, C, C++, Java, Kotlin} &
+Backend: &  \normalsize{NodeJS + ExpressJS, Django, Springboot} &
+Frontend:  &  \normalsize{ReactJS} &  
+Databases:  &  \normalsize{MongoDB, MySQL, PostgreSQL, PostGIS, SQLite, Redis} & 
+DevOps:  &  \normalsize{Docker, Kubernetes, CI/CD} & 
+\end{tabularx}
+
+
+
+
+% \section{Work Experience}
+
+% \begin{tabularx}{\linewidth}{ @{} l X @{} }
+% % \textbf{Exec. Web \& IT, NUST Olympiad} & \hfill Dec 2023 – Feb 2024 \\
+% % \multicolumn{2}{@{}p{\linewidth}@{}}{
+% % Built the MERN stack website for NUST’s flagship event in a fast-paced team setting.
+% % } \\[5pt]
+
+% \textbf{Deep Learning Research Intern, TUKL DLL SEECS} & \hfill Jun 2024 – Nov 2024 \\
+% \multicolumn{2}{@{}p{\linewidth}@{}}{
+% Worked on EEG classification and explainable AI models and created a chatbot for querying 600+ EEG recordings with the ability to append more data.
+% } \\[5pt]
+
+% % \textbf{Software Eng. Intern, Proto IT Consultants} & \hfill Nov 2024 – Feb 2025 \\
+% % \multicolumn{2}{@{}p{\linewidth}@{}}{
+% % Maintained 30+ scrapers collecting 300K+ events. Built backends for a major AI products.
+% % } \\[5pt]
+
+% % \textbf{Software Engineer, Pinkfly} & \hfill Feb 2025 – June 2025 \\
+% % \multicolumn{2}{@{}p{\linewidth}@{}}{
+% % Developing backend for a ride-hailing app and building RAG pipelines to automate in-app support.
+% % } \\
+
+% \textbf{Software Engineer Intern, Bazaar Technologies} & \hfill Jun 2025 – Present \\
+% \multicolumn{2}{@{}p{\linewidth}@{}}{
+% Worked with the Finance squad and gained experience with payment flows and complex microservice architectures.
+% \begin{itemize}
+%     \item Made refunds for card payments instant via wallet-first approach. 47\%\ customers retained the money in their wallet.
+%     \item Integrated a new payment gateway into the mobile app, resulting in an 11\%\ increase in digitally paid orders.
+%     \item Migrated microservices to the latest stable versions of Java and Springboot
+% \end{itemize} 
+% } \\[5pt]
+
+% \end{tabularx}
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Certifications}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+Developing Backend Apps with Node JS and Express by \textbf{IBM} & 2024 \\
+
+Developing Frontend Apps with React by \textbf{IBM} & 2024 \\
+
+Machine Learning Specialization by \textbf{DeepLearning.AI, Stanford University} & 2024 \\
+
+Deep Learning Specialization by \textbf{DeepLearning.AI, Stanford University} & 2024 \\
+\end{tabularx}
+
+\section{Extra-Curricular Activities}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Marketing Executive, Google Developer Student Club (NUST)} 
+& Sep 2024 -- May 2025 \\
+\multicolumn{2}{@{}X@{}}{Successfully marketed multiple events and gathered audiences of 200--500 people.} \\[6pt]
+
+\textbf{Team Member, NUST Cricket Team} 
+& Sep 2023 -- May 2024 \\
+\multicolumn{2}{@{}X@{}}{Represented NUST in inter-university games and tournaments.} \\
+\end{tabularx}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+
+
+
+\vfill
+% \center{\footnotesize Last updated: \today}
+
+\end{document}
