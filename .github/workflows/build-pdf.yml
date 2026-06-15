@@ -23,7 +23,7 @@ jobs:
           root_file: cv.tex
 
       - name: Rename PDF for download
-        run: mv cv.pdf "Resume - Muhammad Saad Ashraf.pdf"
+        run: mv cv.pdf "Resume-Muhammad-Saad-Ashraf.pdf"
 
       - name: Replace "latest" release
         env:
@@ -35,4 +35,4 @@ jobs:
             --title "Latest CV" \
             --notes "Auto-built from ${{ github.sha }}." \
             --latest \
-            "Resume - Muhammad Saad Ashraf.pdf"
+            "Resume-Muhammad-Saad-Ashraf.pdf"
